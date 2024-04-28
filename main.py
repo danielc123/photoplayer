@@ -159,10 +159,10 @@ def album_player(folder_path):
     image_count_text_rect = image_count_text_surface.get_rect(center=(150, 375))
 
     new_image_surface = pygame.image.load(image_file_paths[current_image_index])
-    if new_image_surface.get_height() > 500:
-        new_image_surface = pygame.transform.scale(new_image_surface, (new_image_surface.get_width() * (500/new_image_surface.get_height()), 500))
+    if new_image_surface.get_height() > 480:
+        new_image_surface = pygame.transform.scale(new_image_surface, (int( (new_image_surface.get_width() * 480)/new_image_surface.get_height()), 480))
     elif new_image_surface.get_width() > 800:
-        new_image_surface = pygame.transform.scale(new_image_surface, (800, new_image_surface.get_height() * (800/new_image_surface.get_width())))
+        new_image_surface = pygame.transform.scale(new_image_surface, (800, int( (new_image_surface.get_height() * 800 )/new_image_surface.get_width() )))
     new_image_rect = new_image_surface.get_rect(center=(WIDTH/2, HEIGHT/2))
 
     SCREEN.blit(new_image_surface, new_image_rect)
@@ -213,10 +213,10 @@ def album_player(folder_path):
             LOAD_NEW_ALBUM_BUTTON.update(SCREEN)
 
             new_image_surface = pygame.image.load(image_file_paths[current_image_index])
-            if new_image_surface.get_height() > 500:
-                new_image_surface = pygame.transform.scale(new_image_surface, (new_image_surface.get_width() * (500/new_image_surface.get_height()), 500))
+            if new_image_surface.get_height() > 480:
+                new_image_surface = pygame.transform.scale(new_image_surface, ( int((new_image_surface.get_width() * 480)/new_image_surface.get_height()), 480))
             elif new_image_surface.get_width() > 800:
-                new_image_surface = pygame.transform.scale(new_image_surface, (800, new_image_surface.get_height() * (800/new_image_surface.get_width())))
+                new_image_surface = pygame.transform.scale(new_image_surface, (800, int((new_image_surface.get_height() * 800)/new_image_surface.get_width())))
             new_image_rect = new_image_surface.get_rect(center=(WIDTH/2, HEIGHT/2))
 
             SCREEN.blit(new_image_surface, new_image_rect)
