@@ -13,7 +13,7 @@ import os.path
 
 pygame.init()
 
-WIDTH, HEIGHT = 1600, 900
+WIDTH, HEIGHT = 800, 480
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Photo Album Player | BaralTech 2022")
 
