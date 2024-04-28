@@ -28,7 +28,7 @@ def regular_font(size):
 
 # Global variables
 
-BASE_TEXT_COLOR = "#6fffe9"
+BASE_TEXT_COLOR = (111, 255, 233, 1) #"#6fffe9"
 
 BACKGROUND_IMAGE = pygame.image.load("assets/background.png")
 SCREEN.blit(BACKGROUND_IMAGE, (0, 0))
@@ -84,11 +84,11 @@ def main_menu():
     SCREEN.blit(TITLE_TEXT_SURFACE, TITLE_TEXT_RECT)
     LOAD_BUTTON = Button(
         surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 415), text_input="Load",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     QUIT_BUTTON = Button(
         surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 585), text_input="Quit",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     while True:
         current_mouse_pos = pygame.mouse.get_pos()
@@ -129,23 +129,23 @@ def album_player(folder_path):
     
     REWIND_BUTTON = Button(
         surface=REWIND_ICON_SURFACE, pos=(WIDTH/2-100, HEIGHT-150), text_input="",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     PAUSE_BUTTON = Button(
         surface=PAUSE_ICON_SURFACE, pos=(WIDTH/2, HEIGHT-150), text_input="",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     PLAY_BUTTON = Button(
         surface=PLAY_ICON_SURFACE, pos=(WIDTH/2, HEIGHT-150), text_input="",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     SEEK_BUTTON = Button(
         surface=SEEK_ICON_SURFACE, pos=(WIDTH/2+100, HEIGHT-150), text_input="",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     LOAD_NEW_ALBUM_BUTTON = Button(
         surface=LOAD_NEW_ALBUM_SURFACE, pos=(WIDTH-325, HEIGHT-150), text_input="",
-        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color="white"
+        font=bold_font(100), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
 
     previous_time = pygame.time.get_ticks()
