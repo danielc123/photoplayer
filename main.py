@@ -81,14 +81,14 @@ def pause_button():
 
 def main_menu():
     TITLE_TEXT_SURFACE = bold_font(60).render("Photo Album Player", True, BASE_TEXT_COLOR)
-    TITLE_TEXT_RECT = TITLE_TEXT_SURFACE.get_rect(center=(WIDTH/2, 175))
+    TITLE_TEXT_RECT = TITLE_TEXT_SURFACE.get_rect(center=(WIDTH/2, 87))
     SCREEN.blit(TITLE_TEXT_SURFACE, TITLE_TEXT_RECT)
     LOAD_BUTTON = Button(
-        surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 415), text_input="Load",
+        surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 207), text_input="Load",
         font=bold_font(50), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     QUIT_BUTTON = Button(
-        surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 585), text_input="Quit",
+        surface=MAIN_MENU_BUTTON_BACKGROUND, pos=(WIDTH/2, 292), text_input="Quit",
         font=bold_font(50), base_color=BASE_TEXT_COLOR, hovering_color=(111, 255, 233, 1)
     )
     while True:
@@ -153,10 +153,10 @@ def album_player(folder_path):
     COOLDOWN = 5000
 
     photo_title_text_surface = bold_font(45).render(image_names[current_image_index], True, BASE_TEXT_COLOR)
-    photo_title_text_rect = photo_title_text_surface.get_rect(center=(WIDTH/2, 150))
+    photo_title_text_rect = photo_title_text_surface.get_rect(center=(WIDTH/2, 37))
 
     image_count_text_surface = regular_font(40).render(f"IMG {current_image_index+1}/{len(image_names)}", True, BASE_TEXT_COLOR)
-    image_count_text_rect = image_count_text_surface.get_rect(center=(300, 755))
+    image_count_text_rect = image_count_text_surface.get_rect(center=(150, 375))
 
     new_image_surface = pygame.image.load(image_file_paths[current_image_index])
     if new_image_surface.get_height() > 500:
@@ -227,7 +227,7 @@ def album_player(folder_path):
             SCREEN.blit(photo_title_text_surface, photo_title_text_rect)
             
             image_count_text_surface = regular_font(40).render(f"IMG {current_image_index+1}/{len(image_names)}", True, BASE_TEXT_COLOR)
-            image_count_text_rect = image_count_text_surface.get_rect(center=(300, 755))
+            image_count_text_rect = image_count_text_surface.get_rect(center=(150, 375))
 
             SCREEN.blit(image_count_text_surface, image_count_text_rect)
 
