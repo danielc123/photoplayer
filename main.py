@@ -8,6 +8,7 @@ from tkinter import filedialog
 import glob
 import os
 import os.path
+import config
 
 # Setup
 
@@ -48,8 +49,7 @@ def load_button():
 #    filedialogwindow.withdraw()
 #    filepath = filedialog.askdirectory(title="Choose your Photo Album")
 #    filedialogwindow.destroy()
-#    filepath = "/root/photos/"
-    album_player(filepath)
+    album_player(config.PHOTO_DIRECTORY)
 
 def quit_button():
     pygame.quit()
