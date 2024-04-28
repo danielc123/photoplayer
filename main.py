@@ -44,10 +44,11 @@ LOAD_NEW_ALBUM_SURFACE = pygame.image.load("assets/load_new_album_icon.png")
 
 # Button functions
 def load_button():
-    filedialogwindow = tkinter.Tk()
-    filedialogwindow.withdraw()
-    filepath = filedialog.askdirectory(title="Choose your Photo Album")
-    filedialogwindow.destroy()
+#    filedialogwindow = tkinter.Tk()
+#    filedialogwindow.withdraw()
+#    filepath = filedialog.askdirectory(title="Choose your Photo Album")
+#    filedialogwindow.destroy()
+#    filepath = "/root/photos/"
     album_player(filepath)
 
 def quit_button():
